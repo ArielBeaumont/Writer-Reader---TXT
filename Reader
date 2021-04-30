@@ -1,0 +1,19 @@
+jTextField1.setText("");
+        try {
+            RandomAccessFile usuarioID = new RandomAccessFile("lastLogon.txt", "rw");
+            try {
+                int a = 1;
+                while(a == 1){
+                    String line = usuarioID.readLine();
+                    jTextField1.setText(line);  
+                    System.out.println(line);
+                    a=5;
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(AppMenu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(AppMenu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        // code readin and changing value
