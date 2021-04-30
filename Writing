@@ -1,0 +1,12 @@
+try {
+                    FileWriter myWriter = new FileWriter("lastLogon.txt");
+                    myWriter.write(jTextField1.getText());
+                    myWriter.close();
+                    System.out.println("Successfully wrote to the file.");
+                    } catch (IOException e) {
+                        System.out.println("An error occurred.");
+                        e.printStackTrace();
+                }
+                
+                
+                // TextField to toher text
